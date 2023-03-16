@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Manrope', sans-serif;
+        }
+        p{
+            letter-spacing: 2px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e3e3e3;
+            min-height: 100vh;
+        }
+        .card{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 350px;
+            width: 300px;
+            flex-direction: column;
+            gap: 35px;
+            border-radius: 15px;
+            background: #e3e3e3;
+            box-shadow: 16px 16px 32px #c8c8c8,
+                    -16px -16px 32px #fefefe;
+        }
+        .input{
+            position: relative;
+            width: 250px;
+        }
+        .input input{
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: none;
+            color:#000;
+            font-size: 1em;
+            background: transparent;
+            border-left: 2px solid #000;
+            border-bottom: 2px solid #000;
+            transition: 0.1s;
+        }
+        .input span{
+            margin-top: 5px;
+            position: absolute;
+            left: 0;
+            transform: translateY(-4px);
+            margin-left: 10px;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 12px;
+            color: #000;
+            transition: 0.5s;
+            letter-spacing: 3px;
+        }
+
+        .input input:valid~span, .input input:focus~span{
+            transform: translateX(113px) translateY(-15px);
+            font-size: 0.8em;
+            padding: 5px 10px;
+            background: #000;
+            letter-spacing: 0.2em;
+            color: #fff;
+            border: 2px;
+        }
+        .input input:valid, .input input:focus{
+            border: 2px solid #000;
+        }
+        button{
+            height: 45px;
+            width: 100px;
+            border-radius: 5px;
+            border: 2px solid #000;
+            cursor: pointer;
+            background-color: transparent;
+            transition: 0.5s;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+        button:hover{
+            background: #000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <p>SIGN UP<p>
+            <div class="input">
+                <input type="text" required="required">
+                <span>USERNAME</span>
+            </div>
+            <div class="input">
+                <input type="password" required="required">
+                <span>PASSWORD</span>
+            </div>
+            <button>ENTER</button>
+        </div>
+    </div>
+</body>
+</html>
